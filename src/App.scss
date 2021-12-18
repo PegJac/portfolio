@@ -1,0 +1,127 @@
+.App {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: peachpuff;
+  font-family: monospace;
+  color: black;
+  
+  .landingPageComponent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+
+    header {
+      height: 5em;
+      width: 90%;
+      position: fixed;
+      top: 0;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &.light {
+        color: peachpuff;
+
+        a {
+          color: peachpuff;        }
+      }
+
+      #name {
+        width: min-content;
+      }
+      
+      nav {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+
+    #imageContainer {
+      padding-top: 8em;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+
+      a {
+        margin: 2em;
+        width: min-content;
+        height: min-content;
+        position: relative;
+        
+        &:nth-of-type(even){
+          align-self: flex-end;
+          z-index: 1;
+          top: 5em;
+        }
+
+        &#restMob {
+          top: 100px;
+
+        }
+
+        &#restDesk {
+          
+        }
+
+        &#htmlMob {
+          align-self: flex-start;
+        }
+        
+        &#htmlDesk {
+          align-self: center;
+          top: 2em;
+        }
+
+        &#glossMob {
+          top: 22em;
+        }
+
+        &#glossDesk {
+        }
+
+        img {
+          width: 500px;
+          box-shadow: .5em .5em 1em rgba(128, 128, 128, 0.183);
+          cursor: pointer;
+    
+          &:nth-of-type(even){
+            z-index: 2;
+          }
+          &:nth-of-type(odd){
+            width: 200px;
+          }
+    
+        }
+      }
+    }
+  }
+
+  #textComponent {
+    background-color: black;
+    height: 100vh;
+    color: peachpuff;
+     
+    section {
+      position: relative;
+      top: 20vh;
+      padding: 2em;
+
+      #icon {
+        width: 1em;
+        margin-right: 1em;
+      }
+    }
+  }
+}
