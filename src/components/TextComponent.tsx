@@ -10,23 +10,17 @@ export const TextComponent = () => {
                     <FontAwesomeIcon id="icon" icon={faBug} />
                     Front end developer
                 </span>
-                <br />
-                <br />
                 <span>
                     <FontAwesomeIcon id="icon" icon={faMapPin} />
                     Medieinstitutet, Stockholm
                 </span>
-                <br />
-                <br />
-                <span>
-                    <FontAwesomeIcon id="icon" icon={faCheck} />
-                    Examen maj 2022
-                </span>
-                <br />
-                <br />
                 <span>
                     <FontAwesomeIcon id="icon" icon={faSearch} />
                     Praktik 24 januari - 13 maj
+                </span>
+                <span>
+                    <FontAwesomeIcon id="icon" icon={faCheck} />
+                    Examen maj 2022
                 </span>
             </section>
         </div>

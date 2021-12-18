@@ -1,0 +1,203 @@
+@import './variables';
+
+@mixin hover {
+    &:hover {
+        color: $mediumColor;
+      }
+}
+
+@mixin portrait {
+    @media screen and (min-width: 576px){
+        .App {
+            .landingPageComponent {
+                #imageContainer {
+                    a {
+                        &#restMob {
+                            top: 20em;
+                        }
+                        
+                        &#restDesk {
+                            top: 10em;
+                        }
+                        
+                        &#htmlMob {
+                            top: 30em;
+                        }
+                        
+                        &#htmlDesk {
+                            top: 7em;
+                        }
+                        
+                        &#glossMob {
+                            top: 30em;
+                        }
+                        
+                        &#glossDesk {
+                            top: 10em;
+                        }
+
+                        img {
+                            width: 400px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 768px){
+        .App {
+            .landingPageComponent {
+                #imageContainer {
+                    width: 80%;
+                    
+                    a {
+                        &#glossDesk {
+                            right: 5em;
+                        }
+                                                
+                        &#htmlDesk {
+                            top: 20em;
+                        }
+
+                        img {
+                            width: 400px;
+                        }
+
+                        &.mobile {
+                            img {
+                                width: 300px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin laptop {
+    @media screen and (min-width: 992px){
+        .App {
+            flex-direction: row;
+
+            .landingPageComponent {
+                width: 70%;
+
+                header {
+
+                    #name {
+                        color: $darkColor;
+                    }
+                    nav {
+                        width: 30%;
+                        color: $lightColor;
+                      
+                        a {
+                            color: $lightColor;
+                        }
+                    }
+                }
+
+                #imageContainer {
+                    a {
+                        &#restMob {
+                            top: 10em;
+                        }
+                        
+                        &#restDesk {
+                            top: 10em;
+                        }
+                        
+                        &#htmlMob {
+                            top: 20em;
+                        }
+                        
+                        &#htmlDesk {
+                            top: 10em;
+                        }
+                          
+                        &#glossMob {
+                            top: 50em;
+                        }
+                        
+                        &#glossDesk {
+                            top: 0em;
+                        }
+
+                        img {
+                            width: 400px;
+                        }
+                    }
+                }
+            }
+            
+            #textComponent {
+                width: 30%;
+                position: fixed;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px){
+        .App {
+            .landingPageComponent {
+                #imageContainer {
+                    a {
+                        &#htmlDesk {
+                            top: 0em;
+                            right: 5em;
+                            align-self: flex-end;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin large-desktop {
+    @media screen and (min-width: 1700px){
+        .App {
+            .landingPageComponent {
+                #imageContainer {
+                    a {
+                        &#restMob {
+                            top: 0em;
+                        }
+                        
+                        &#restDesk {
+                            top: 0em;
+                        }
+                        
+                        &#htmlMob {
+                            top: 0em;
+                        }
+                        
+                        &#htmlDesk {
+                            top: 10em;
+                        }
+                          
+                        &#glossMob {
+                            top: 0em;
+                        }
+                        
+                        &#glossDesk {
+                            top: 0em;
+                        }
+
+                        img {
+                            width: 500px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

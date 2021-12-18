@@ -7,8 +7,6 @@ import htmlMobile from '../assets/images/htmlMobile.png'
 import htmlDesktop from '../assets/images/htmlDesktop.png'
 import restaurantMobile from '../assets/images/restaurantMobile.png'
 import restaurantDesktop from '../assets/images/restaurantDesktop.png'
-import webshopMobile from '../assets/images/webshopMobile.png'
-import webshopDesktop from '../assets/images/webshopDesktop.png'
 
 interface ILandingPageComponent {
     textIsVisable: boolean;

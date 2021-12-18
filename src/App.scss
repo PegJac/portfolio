@@ -1,51 +1,67 @@
+@import './styles/mixins.scss';
+@import './styles/variables';
+
 .App {
   height: 100%;
   width: 100%;
   margin: 0;
-  background-color: peachpuff;
-  font-family: monospace;
-  color: black;
-  
+  background-color: $lightColor;
+  font-size: 16px;
+  color: $darkColor;
+  display: flex;
+  flex-direction: column;
+
   .landingPageComponent {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     scroll-behavior: smooth;
-
+    
     header {
       height: 5em;
-      width: 90%;
+      width: 100%;
       position: fixed;
       top: 0;
+      left: 0;
       z-index: 1;
       display: flex;
       justify-content: space-between;
       align-items: center;
-
+      align-self: center;
+      
       &.light {
-        color: peachpuff;
-
+        color: $lightColor;
+      
         a {
-          color: peachpuff;        }
+          color: $lightColor;
+        }
       }
 
       #name {
         width: min-content;
+        font-size: 50px;
+        margin-left: 1em;
       }
-      
+        
       nav {
-        width: 90%;
+        width: 50%;
         display: flex;
         justify-content: space-evenly;
+
         
         a {
-          color: black;
+          color: $darkColor;
           text-decoration: none;
+          @include hover;
+        }
+        
+        p {
+          @include hover;
         }
       }
     }
-
+    
     #imageContainer {
       padding-top: 8em;
       width: 100%;
@@ -53,7 +69,7 @@
       justify-content: center;
       flex-direction: column;
       align-items: flex-start;
-
+      
       a {
         margin: 2em;
         width: min-content;
@@ -62,19 +78,17 @@
         
         &:nth-of-type(even){
           align-self: flex-end;
-          z-index: 1;
           top: 5em;
         }
-
+        
         &#restMob {
-          top: 100px;
-
-        }
-
-        &#restDesk {
+          top: 10em;
           
         }
 
+/*         &#restDesk {
+        } */
+        
         &#htmlMob {
           align-self: flex-start;
         }
@@ -83,41 +97,45 @@
           align-self: center;
           top: 2em;
         }
-
+        
         &#glossMob {
           top: 22em;
         }
-
+        
         &#glossDesk {
+          right: 2em;
         }
-
+     
         img {
-          width: 500px;
+          width: 200px;
           box-shadow: .5em .5em 1em rgba(128, 128, 128, 0.183);
           cursor: pointer;
-    
-          &:nth-of-type(even){
-            z-index: 2;
-          }
-          &:nth-of-type(odd){
-            width: 200px;
-          }
-    
         }
+        
+/*         &.mobile {
+          z-index: 2;
+        } */
       }
     }
   }
-
+  
   #textComponent {
-    background-color: black;
+    background-color: $darkColor;
     height: 100vh;
-    color: peachpuff;
-     
+    width: 100%;
+    color: $lightColor;
+    
     section {
+      display: flex;
+      flex-direction: column;
       position: relative;
       top: 20vh;
       padding: 2em;
 
+      span {
+        margin-bottom: 1em;
+      }
+      
       #icon {
         width: 1em;
         margin-right: 1em;
@@ -125,3 +143,9 @@
     }
   }
 }
+
+@include portrait;
+@include tablet;
+@include laptop;
+@include desktop;
+@include large-desktop;
