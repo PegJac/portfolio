@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapPin, faCheck, faSearch, faBug } from '@fortawesome/free-solid-svg-icons'
 
