@@ -9,6 +9,9 @@ function App() {
   const [screenSize, setScreenSize] = useState<number>()
   const [scroll, setScroll] = useState(0)
 
+  const textComp = document.getElementById("textComponent")?.getBoundingClientRect()
+  const header = document.getElementById("name")?.getBoundingClientRect()
+
   useEffect(() => {
     setScreenSize(window.innerWidth)
   }, [])
@@ -25,11 +28,6 @@ function App() {
   if (window.innerWidth !== screenSize) {
     console.log("window innerWidth: ", window.innerWidth, "State screenSize: ", screenSize)
   }
-
-  const textComp = document.getElementById("textComponent")?.getBoundingClientRect()
-  const header = document.getElementById("name")?.getBoundingClientRect()
-
-  let myClass = isVisable ? "textComponent visable" : "textComponent"
 
   window.onscroll = () => { setScroll(prev => prev + 1) }
 

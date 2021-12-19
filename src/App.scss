@@ -48,7 +48,6 @@
         width: 50%;
         display: flex;
         justify-content: space-evenly;
-
         
         a {
           color: $darkColor;
@@ -86,9 +85,6 @@
           
         }
 
-/*         &#restDesk {
-        } */
-        
         &#htmlMob {
           align-self: flex-start;
         }
@@ -111,10 +107,6 @@
           box-shadow: .5em .5em 1em rgba(128, 128, 128, 0.183);
           cursor: pointer;
         }
-        
-/*         &.mobile {
-          z-index: 2;
-        } */
       }
     }
   }
