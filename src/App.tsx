@@ -22,12 +22,7 @@ function App() {
     } else if (textComp && header && textComp.top > header.bottom && isVisable) {
       setIsVisable(false)
     }
-    console.log("isVis: ", isVisable)
-  }, [scroll])
-
-  if (window.innerWidth !== screenSize) {
-    console.log("window innerWidth: ", window.innerWidth, "State screenSize: ", screenSize)
-  }
+  }, [scroll, textComp, header, isVisable])
 
   window.onscroll = () => { setScroll(prev => prev + 1) }
 
